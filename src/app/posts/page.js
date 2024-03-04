@@ -1,32 +1,35 @@
-// import React from 'react';
-// import PropTypes from 'prop-types';
+import Link from "next/link";
 
-const page = async () => {
-  const res = await fetch("http://localhost:5000/posts", {
-    cache: "force-cache",
-  });
-  const posts = await res.json();
+const PostPage = async () => {
+  const res = await fetch(`http://localhost:5000/posts`,{cache: "no-store"});
+  const data = await res.json();
+
   return (
-    <div className="w-full">
-      {posts.map((post) => (
-        <div
-          key={post.id}
-          className="card my-3 w-[70%] bg-gray-100 shadow-xl mx-auto text-gray-600"
-        >
-          <div className="card-body">
-            <h2 className="card-title">{post.title}</h2>
-            <p>{post.description}</p>
-            <p>Likes: {post.likeCounts}</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">See More...</button>
+    <div className="p-12">
+      <div className="w-full grid grid-cols-3 gap-3">
+        {data.map((post) => {
+          return (
+            <div
+              key={post.id}
+              className="card text-white bg-gray-500 rounded-md mx-auto p-12"
+            >
+              <p className="text-2xl font-bold">{post.title}</p>
+              <p className="text-lg font-semibold">{post.description}</p>
+              <div className="flex justify-between gap-12 items-center mt-4">
+                <div className="flex gap-6">
+                <button className="text-xl h-8 w-8 bg-red-600 rounded-full">
+                  ❤
+                </button>
+                <p>Likes: {post.likeCounts}</p>
+                </div>
+                <div><Link href={`/posts/${post.id}`}><button className="btn btn-primary text-white text-lg">Details</button></Link></div>
+              </div>
             </div>
-          </div>
-        </div>
-      ))}
+          );
+        })}
+      </div>
     </div>
   );
 };
 
-page.propTypes = {};
-
-export default page;
+export default PostPage;
