@@ -1,0 +1,41 @@
+{
+    "posts": [
+        {
+          "id": 1,
+          "title": "Exploring Nature's Wonders",
+          "description": "Embark on a journey through lush forests, cascading waterfalls, and majestic mountains. Witness the beauty of nature as it unfolds before your eyes.",
+          "likeCounts": 1500
+        },
+        {
+          "id": 2,
+          "title": "Tech Innovations Unveiled",
+          "description": "Discover the latest technological breakthroughs shaping the future. From AI advancements to cutting-edge gadgets, stay informed on the forefront of innovation.",
+          "likeCounts": 98
+        },
+        {
+          "id": 3,
+          "title": "Culinary Delights Around the World",
+          "description": "Savor the flavors of diverse cuisines as we take you on a gastronomic journey across continents. Indulge your taste buds in a world of exquisite dishes.",
+          "likeCounts": 205
+        },
+        {
+          "id": 4,
+          "title": "Mindful Living Tips",
+          "description": "Embrace a mindful lifestyle with practical tips on meditation, wellness, and self-care. Cultivate a balanced and harmonious life through simple yet effective practices.",
+          "likeCounts": 120
+        },
+        {
+          "id": 5,
+          "title": "Epic Adventure Chronicles",
+          "description": "Join us on thrilling adventures from the heart of the Amazon rainforest to the peaks of the Himalayas. Experience the adrenaline of epic journeys and daring exploits.",
+          "likeCounts": 180
+        },
+        {
+          "id": 6,
+          "title": "Artistic Expressions Gallery",
+          "description": "Immerse yourself in the world of art with captivating masterpieces and the stories behind them. From classical to contemporary, explore the diverse realms of creativity.",
+          "likeCounts": 75
+        }
+      ]
+      
+}
