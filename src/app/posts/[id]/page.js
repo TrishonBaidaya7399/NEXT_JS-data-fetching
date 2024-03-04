@@ -2,9 +2,10 @@ import Link from 'next/link';
 import React from 'react';
 
 const DetailsPage = async({params}) => {
+  //SSR rendering
   const res = await fetch(`http://localhost:5000/posts/${params.id}`)
   const post = await res.json();
-  // console.log(post);
+  console.log(post);
     return (
         <div>
             <div

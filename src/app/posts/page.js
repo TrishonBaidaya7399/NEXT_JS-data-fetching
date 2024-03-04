@@ -1,6 +1,17 @@
 import Link from "next/link";
 
+export async function generateStaticParams() {
+  const res = await fetch(`http://localhost:5000/posts`)
+  const data = res.json()
+  const ids = data.map.slice(0,3)((post)=> {
+    return { id: post.id + "" }
+  })
+  console.log(ids);
+  return ids
+}
+
 const PostPage = async () => {
+  //SSG - Static Server Side Generation rendering
   const res = await fetch(`http://localhost:5000/posts`,{cache: "no-store"});
   const data = await res.json();
 
